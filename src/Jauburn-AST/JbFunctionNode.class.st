@@ -18,6 +18,14 @@ JbFunctionNode >> body: anObject [
 	body := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+JbFunctionNode >> evaluateIn: environment [ 
+	^ JbFunction new 
+		body: self body;
+		parameters: self parameters;
+		environment: environment
+]
+
 { #category : #accessing }
 JbFunctionNode >> parameters [
 	^ parameters

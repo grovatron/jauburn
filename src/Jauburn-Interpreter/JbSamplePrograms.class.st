@@ -25,3 +25,19 @@ JbSamplePrograms class >> run: method [
 
 	^JbInterpreter new run: (self perform: method)
 ]
+
+{ #category : #'as yet unclassified' }
+JbSamplePrograms class >> sqrt [ 
+	^ 'var num = stringToNumber(input("Enter a positive integer"));
+		var guess = num;
+		var precision = 1 / 1000000000;
+		var x = guess * guess;
+		var condition = abs(num - x) > precision;
+		while (condition) {
+			println(concat("Incorrect guess: ", guess));
+			var y = num / guess;
+			var z = num + y;
+			guess = z / 2;
+		}
+		println(concat("Answer: ", guess);'
+]
